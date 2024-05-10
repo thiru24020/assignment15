@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="numberInput">Enter a Number</label>
+
+    <input type="number" id="numberInput" min="0">
+    <button type="button" onclick="factorial()">Calculate Factorial</button>
+    <h3>Factorial: <span id="answer"></span></h3>
+    <!-- <h3>Factor: <span id="factor"></span></h3> -->
+
+    
+    <script>
+    
+    function factorial(){
+        const numberInput = document.getElementById('numberInput').value;
+        const resultElement = document.getElementById('answer');
+        const result = document.getElementById('factor');
+        const number = parseInt(numberInput);
+       
+            let ans = 1;
+            for(let i=1;i<=number;i++){
+                ans = ans*i;
+            }
+            resultElement.textContent = `Factorial of ${number} is ${ans}.`;
+           
+        }  
+         
+    </script>
+</body>
+</html>
